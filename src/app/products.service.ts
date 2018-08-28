@@ -14,7 +14,7 @@ export class ProductsService {
     }
 
     deleteProduct(productName) {
-        this.products = this.products.filter(p => p !== productName);
+        this.products = this.products.filter(product => product !== productName);
         this.productsUpdated.next();
     }
 }

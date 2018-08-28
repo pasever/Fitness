@@ -31,6 +31,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     ngOnDestroy() {
         this.productsSubscription.unsubscribe();
     }
+
     onAddProduct(form) {
       // console.log(form)
         if(form.valid) {
@@ -40,6 +41,6 @@ export class ProductsComponent implements OnInit, OnDestroy {
     }
 
     onRemoveProduct(productName: string) {
-      this.products = this.products.filter( p => p !==productName);
+      this.products = this.products.filter( product => product !==productName);
     }
 }
